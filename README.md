@@ -27,8 +27,12 @@ Check the below contents for further details about this project.
 
 # 📖 Description
 
-This repository includes three class files (`Person` / `Student` / `Teacher`).
+The project follows Object Oriented Programming using `Ruby`.
+Decorator design pattern is implemented for adding several operations on `name` variable in `Person` class.
+This repository includes seven class files (`Person` / `Student` / `Teacher` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
+`Nameable` is a parent class for both `Person` & `Decorator`.
 `Person` is a parent class for both `Student` & `Teacher`.
+`Decorator` is a parent class for both `Capitalize` & `Trimmer`.
 
 
 📌 **Tech Stack:**
@@ -39,12 +43,17 @@ This repository includes three class files (`Person` / `Student` / `Teacher`).
 - Class `Person` includes a constructor & contains two methods
 - Constructor in `Person` class includes three arguments (`age` / `name` / `parent_permission`)
 - First method in `Person` class is a public method called `can_use_services`
-- Second method `Person` class is a private method called `of_age`
+- Second method in `Person` class is an unherited method called `correct_name`
+- Third method in `Person` class is a private method called `of_age`
 - Class `Student` includes a constructor & one method
 - Constructor in `Student` class includes three arguments (`classroom` / `age` / `name` / `parent_permission`)
 - Only method in `Studnet` class is a public method called `play_hooky`
 - Constructor in `Teacher` class includes three arguments (`specialization` / `age` / `name` / `parent_permission`)
 - Only method in `Teacher` class is a public method that overrides `can_use_services` from parent class
+- Class `Nameable` includes one method `correct_name` that raises an exception
+- Class `Decorator` includes only constructor that passes a `Nameable` object
+- Class `Capitalize` includes one inherited method `correct_name` & overrides it
+- Class `Trimmer` includes one inherited method `correct_name` & overrides it
 
 <p align="right"><a href="#title">back to top</a></p>
 
@@ -66,7 +75,10 @@ bundle install
 ```
 
 📌 **Development:**
-- Run project inside `IRB` terminal
+- Run `main.rb` file with
+```
+ruby main.rb
+```
 
 <p align="right"><a href="#title">back to top</a></p>
 
