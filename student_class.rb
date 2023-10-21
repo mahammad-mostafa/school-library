@@ -1,7 +1,8 @@
-class Studnt < Person
-  def initialize(classroom, age, name = 'Unknown', parent_permission: true)
+class Student < Person
+  def initialize(classroom, *arguments)
     @classroom = classroom
-    super(age, name, parent_permission)
+    classroom.add_student(self)
+    super(*arguments)
   end
 
   def play_hooky
