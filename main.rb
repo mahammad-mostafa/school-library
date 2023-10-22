@@ -1,10 +1,13 @@
 require_relative 'nameable_class'
-require_relative 'person_class'
-require_relative 'student_class'
-require_relative 'teacher_class'
 require_relative 'decorator_class'
 require_relative 'capitalize_class'
 require_relative 'trimmer_class'
+require_relative 'person_class'
+require_relative 'student_class'
+require_relative 'teacher_class'
+require_relative 'classroom_class'
+require_relative 'book_class'
+require_relative 'rental_class'
 
 person = Person.new(22, 'maximilianus')
 person.correct_name

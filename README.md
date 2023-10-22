@@ -28,32 +28,42 @@ Check the below contents for further details about this project.
 # 📖 Description
 
 The project follows Object Oriented Programming using `Ruby`.
+This repository includes ten class files (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
 Decorator design pattern is implemented for adding several operations on `name` variable in `Person` class.
-This repository includes seven class files (`Person` / `Student` / `Teacher` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
-`Nameable` is a parent class for both `Person` & `Decorator`.
-`Person` is a parent class for both `Student` & `Teacher`.
-`Decorator` is a parent class for both `Capitalize` & `Trimmer`.
-
+Several associations exist bewteen some classes.
 
 📌 **Tech Stack:**
 - Code built with `Ruby`
 - Linting is done with `Rubocop`
 
 📌 **Key Features:**
-- Class `Person` includes a constructor & contains two methods
+- Class `Nameable` is a parent class for both `Person` & `Decorator`
+- Class `Person` is a parent class for both `Student` & `Teacher`
+- Class `Decorator` is a parent class for both `Capitalize` & `Trimmer`
+- Class `Person` includes a constructor & four methods
 - Constructor in `Person` class includes three arguments (`age` / `name` / `parent_permission`)
-- First method in `Person` class is a public method called `can_use_services`
-- Second method in `Person` class is an unherited method called `correct_name`
-- Third method in `Person` class is a private method called `of_age`
+- First method in `Person` class is a public method called `add_rental`
+- Second method in `Person` class is a public method called `can_use_services`
+- Third method in `Person` class is an unherited method called `correct_name`
+- Fourth method in `Person` class is a private method called `of_age`
 - Class `Student` includes a constructor & one method
 - Constructor in `Student` class includes three arguments (`classroom` / `age` / `name` / `parent_permission`)
-- Only method in `Studnet` class is a public method called `play_hooky`
+- Only method in `Student` class is a public method called `play_hooky`
 - Constructor in `Teacher` class includes three arguments (`specialization` / `age` / `name` / `parent_permission`)
 - Only method in `Teacher` class is a public method that overrides `can_use_services` from parent class
 - Class `Nameable` includes one method `correct_name` that raises an exception
 - Class `Decorator` includes only constructor that passes a `Nameable` object
 - Class `Capitalize` includes one inherited method `correct_name` & overrides it
 - Class `Trimmer` includes one inherited method `correct_name` & overrides it
+- Class `Classroom` includes a constructor & one method
+- Constructor in `Classroom` includes one argument `label`
+- Only method in `Classroom` class is public method `add_student`
+- Class `Book` includes a constructor & one method
+- Constructor in `Book` includes two arguments (`title` / `author`)
+- Only method in `Book` class is public method `add_rental`
+- Class `Rental` includes only one constructor
+- Constructor in `Book` includes three arguments (`date` / `book` / `person`)
+
 
 <p align="right"><a href="#title">back to top</a></p>
 
