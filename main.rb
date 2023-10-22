@@ -1,17 +1,17 @@
-require_relative 'nameable_class'
-require_relative 'decorator_class'
-require_relative 'capitalize_class'
-require_relative 'trimmer_class'
-require_relative 'person_class'
-require_relative 'student_class'
-require_relative 'teacher_class'
-require_relative 'classroom_class'
-require_relative 'book_class'
-require_relative 'rental_class'
+require_relative 'app_class'
 
-person = Person.new(22, 'maximilianus')
-person.correct_name
-capitalized_person = Capitalize.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = Trimmer.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
+def main
+  app = App.new
+  app.welcome_message
+  loop do
+    app.display_options
+    option = gets.chomp
+    break if option == '7'
+
+    puts ''
+    app.handle_option(option)
+  end
+  app.close_messagge
+end
+
+main

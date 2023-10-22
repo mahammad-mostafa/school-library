@@ -29,6 +29,7 @@ Check the below contents for further details about this project.
 
 The project follows Object Oriented Programming using `Ruby`.
 This repository includes ten class files (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
+Special class `App` for handling all app operations and a file `main.rb` as entry point for it.
 Decorator design pattern is implemented for adding several operations on `name` variable in `Person` class.
 Several associations exist bewteen some classes.
 
@@ -63,7 +64,9 @@ Several associations exist bewteen some classes.
 - Only method in `Book` class is public method `add_rental`
 - Class `Rental` includes only one constructor
 - Constructor in `Book` includes three arguments (`date` / `book` / `person`)
-
+- Class `App` includes a constructor & twelve methods
+- Constructor in `App` initializes several empty arrays
+- Entry point in `main.rb` file with infinite loop
 
 <p align="right"><a href="#title">back to top</a></p>
 
