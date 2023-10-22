@@ -1,4 +1,6 @@
 class Student < Person
+  attr_reader :classroom
+
   def initialize(classroom, *arguments)
     @classroom = classroom
     classroom.add_student(self)
