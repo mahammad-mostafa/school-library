@@ -1,17 +1,18 @@
+require_relative 'message_class'
 require_relative 'app_class'
 
 def main
   app = App.new
-  app.welcome_message
+  Message.welcome_message
   loop do
-    app.display_options
+    Message.display_options
     option = gets.chomp
     break if option == '7'
 
     puts ''
     app.handle_option(option)
   end
-  app.close_messagge
+  Message.close_message
 end
 
 main
