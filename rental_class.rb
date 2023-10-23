@@ -9,4 +9,10 @@ class Rental
     book.add_rental(self)
     person.add_rental(self)
   end
+
+  def self.input_arguments(book, person)
+    print 'Date: '
+    date = gets.chomp
+    new(date, book, person)
+  end
 end
