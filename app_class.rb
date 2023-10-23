@@ -17,30 +17,6 @@ class App
     @classroom = Classroom.new('A')
   end
 
-  def welcome_message
-    puts ''
-    puts 'Welcome to School Library App!'
-  end
-
-  def display_options
-    puts ''
-    puts 'Please choose an option by entering a number:'
-    puts '1 - List all books'
-    puts '2 - List all people'
-    puts '3 - Create a person'
-    puts '4 - Create a book'
-    puts '5 - Create a rental'
-    puts '6 - List all rentals for a given person id'
-    puts '7 - Exit'
-    puts ''
-  end
-
-  def close_messagge
-    puts ''
-    puts 'Thank you for using this app'
-    puts ''
-  end
-
   def handle_option(option)
     case option
     when '1'
@@ -52,11 +28,7 @@ class App
     when '4'
       create_book
     when '5'
-      list_books(true)
-      book = gets.chomp.to_i
-      list_people(true)
-      people = gets.chomp.to_i
-      create_rental(book, people)
+      handle_rental
     when '6'
       list_rentals
     else
@@ -103,40 +75,30 @@ class App
   end
 
   def create_student
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
-    parent_permission = gets.chomp
-    @people.append(Student.new(@classroom, age, name, parent_permission))
+    @people.append(Student.input_arguments(@classroom))
     puts 'Person created successfully'
   end
 
   def create_teacher
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialization: '
-    specialization = gets.chomp
-    @people.append(Teacher.new(specialization, age, name))
+    @people.append(Teacher.input_arguments)
     puts 'Person created successfully'
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    @books.append(Book.new(title, author))
+    @books.append(Book.input_arguments)
     puts 'Book created successfully'
   end
 
+  def handle_rental
+    list_books(true)
+    book = gets.chomp.to_i
+    list_people(true)
+    people = gets.chomp.to_i
+    create_rental(book, people)
+  end
+
   def create_rental(book, person)
-    print 'Date: '
-    date = gets.chomp
-    @rentals.append(Rental.new(date, @books[book], @people[person]))
+    @rentals.append(Rental.input_arguments(@books[book], @people[person]))
     puts 'Rental created successfully'
   end
 
