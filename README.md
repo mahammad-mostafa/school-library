@@ -31,8 +31,10 @@
 The project follows Object Oriented Programming using `Ruby`.
 This repository includes ten class files (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
 Special class `App` for handling all app operations and a file `main.rb` as entry point for it.
+Module `Storage` used for hanlding JSON files read & write.
 Decorator design pattern is implemented for adding several operations on `name` variable in `Person` class.
 Several associations exist bewteen some classes.
+All data is preserved inside three files (`books.json` / `people.json` / `rentals.json`).
 <br/>
 Check the below contents for further details about this project.
 
@@ -60,30 +62,43 @@ Check the below contents for further details about this project.
 - Second method in `Person` class is a public method called `can_use_services`
 - Third method in `Person` class is an unherited method called `correct_name`
 - Fourth method in `Person` class is a private method called `of_age`
-- Class `Student` includes a constructor & two method
+- Class `Student` includes a constructor & four methods
 - Constructor in `Student` class includes three arguments (`classroom` / `age` / `name` / `parent_permission`)
 - First method in `Student` class is a public method called `play_hooky`
 - Second method in `Student` class is a static method called `input_arguments`
+- Third method in `Student` class is a public method called `generate_string`
+- Fourth method in `Student` class is a static method called `parse_string`
 - Constructor in `Teacher` class includes three arguments (`specialization` / `age` / `name` / `parent_permission`)
 - First method in `Teacher` class is a public method that overrides `can_use_services` from parent class
 - Second method in `Teacher` class is a static method called `input_arguments`
+- Third method in `Teacher` class is a public method called `generate_string`
+- Fourth method in `Teacher` class is a static method called `parse_string`
 - Class `Nameable` includes one method `correct_name` that raises an exception
 - Class `Decorator` includes only constructor that passes a `Nameable` object
 - Class `Capitalize` includes one inherited method `correct_name` & overrides it
 - Class `Trimmer` includes one inherited method `correct_name` & overrides it
-- Class `Classroom` includes a constructor & one method
+- Class `Classroom` includes a constructor & three methods
 - Constructor in `Classroom` includes one argument `label`
-- Only method in `Classroom` class is public method `add_student`
-- Class `Book` includes a constructor & one method
+- First method in `Classroom` class is public method `add_student`
+- Second method in `Classroom` class is a public method called `generate_string`
+- Third method in `Classroom` class is a static method called `parse_string`
+- Class `Book` includes a constructor & three methods
 - Constructor in `Book` includes two arguments (`title` / `author`)
-- Only method in `Book` class is public method `add_rental`
-- Class `Rental` includes only one constructor & one method
-- Only method in `Rental` class is a static method called `input_arguments`
+- First method in `Book` class is public method `add_rental`
+- Second method in `Book` class is a public method called `generate_string`
+- Third method in `Book` class is a static method called `parse_string`
+- Class `Rental` includes only one constructor & three methods
+- First method in `Rental` class is a static method called `input_arguments`
+- Second method in `Rental` class is a public method called `generate_string`
+- Third method in `Rental` class is a static method called `parse_string`
 - Constructor in `Book` includes three arguments (`date` / `book` / `person`)
-- Only method in `Book` class is a static method called `input_arguments`
+- First method in `Book` class is a static method called `input_arguments`
+- Second method in `Book` class is a public method called `generate_string`
+- Third method in `Book` class is a static method called `parse_string`
 - Class `App` includes a constructor & twelve methods
 - Constructor in `App` initializes several empty arrays
 - Entry point in `main.rb` file with infinite loop
+- Module `Storage` includes two methods (`read_file` / `write_file`)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
