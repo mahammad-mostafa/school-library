@@ -1,4 +1,4 @@
-require 'JSON'
+require 'json'
 
 module Storage
   def read_file(name)
