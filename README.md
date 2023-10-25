@@ -31,7 +31,7 @@
 The project follows Object Oriented Programming using `Ruby`.
 This repository includes ten class files (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
 Special class `App` for handling all app operations and a file `main.rb` as entry point for it.
-Module `Storage` used for hanlding JSON files read & write.
+Module `Storage` used for handling JSON files read & write.
 Decorator design pattern is implemented for adding several operations on `name` variable in `Person` class.
 Several associations exist bewteen some classes.
 All data is preserved inside three files (`books.json` / `people.json` / `rentals.json`).
