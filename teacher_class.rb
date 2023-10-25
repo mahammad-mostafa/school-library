@@ -8,6 +8,16 @@ class Teacher < Person
     true
   end
 
+  def generate_string
+    { specialization: @specialization, age: @age, name: @name, parent_permission: @parent_permission, id: @id,
+      type: 'Teacher' }
+  end
+
+  def self.parse_string(arguments)
+    new(arguments['specialization'], arguments['age'], arguments['name'],
+        arguments['parent_permission'], arguments['id'])
+  end
+
   def self.input_arguments
     print 'Age: '
     age = gets.chomp

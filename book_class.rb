@@ -1,3 +1,5 @@
+require 'JSON'
+
 class Book
   attr_accessor :title, :author
   attr_reader :rentals
@@ -10,6 +12,14 @@ class Book
 
   def add_rental(rental)
     @rentals.append(rental) unless @rentals.include?(rental)
+  end
+
+  def generate_string
+    { title: @title, author: @author }
+  end
+
+  def self.parse_string(arguments)
+    new(arguments['title'], arguments['author'])
   end
 
   def self.input_arguments
