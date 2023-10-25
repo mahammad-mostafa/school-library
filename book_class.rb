@@ -12,6 +12,14 @@ class Book
     @rentals.append(rental) unless @rentals.include?(rental)
   end
 
+  def generate_string
+    { title: @title, author: @author }
+  end
+
+  def self.parse_string(arguments)
+    new(arguments['title'], arguments['author'])
+  end
+
   def self.input_arguments
     print 'Title: '
     title = gets.chomp

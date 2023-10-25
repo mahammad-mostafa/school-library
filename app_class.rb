@@ -8,13 +8,16 @@ require_relative 'teacher_class'
 require_relative 'classroom_class'
 require_relative 'book_class'
 require_relative 'rental_class'
+require_relative 'storage_module'
 
 class App
+  include Storage
+
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
-    @classroom = Classroom.new('A')
+    read_books
+    read_people
+    read_rentals
+    @classroom = Classroom.new('Math')
   end
 
   def handle_option(option)
@@ -110,5 +113,32 @@ class App
     @rentals.each do |rental|
       puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
     end
+  end
+
+  def read_books
+    @books = []
+    books = read_file('books.json')
+    books.each { |book| @books.append(Book.parse_string(book)) }
+  end
+
+  def read_people
+    @people = []
+    people = read_file('people.json')
+    people.each do |person|
+      @people.append(Student.parse_string(person)) if person['type'] == 'Student'
+      @people.append(Teacher.parse_string(person)) if person['type'] == 'Teacher'
+    end
+  end
+
+  def read_rentals
+    @rentals = []
+    rentals = read_file('rentals.json')
+    rentals.each { |rental| @rentals.append(Rental.parse_string(rental)) }
+  end
+
+  def close_app
+    write_file('books.json', @books)
+    write_file('people.json', @people)
+    write_file('rentals.json', @rentals)
   end
 end
