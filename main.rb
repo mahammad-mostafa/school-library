@@ -7,8 +7,10 @@ def main
   loop do
     Message.display_options
     option = gets.chomp
-    break if option == '7'
-
+    if option == '7'
+      app.close_app
+      break
+    end
     puts ''
     app.handle_option(option)
   end
