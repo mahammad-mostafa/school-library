@@ -1,5 +1,5 @@
 require_relative '../person_class'
-​
+
 describe('Tests for methods inside Person class:') do
   # Setup
   before :all do

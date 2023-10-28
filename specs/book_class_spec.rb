@@ -1,5 +1,5 @@
 require_relative '../book_class'
-​
+
 describe('Tests for methods inside Book class:') do
   # Setup
   before :all do

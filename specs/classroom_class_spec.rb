@@ -1,5 +1,5 @@
 require_relative '../classroom_class'
-​
+
 describe('Tests for methods inside Classroom class:') do
   # Setup
   before :all do
