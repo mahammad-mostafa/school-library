@@ -1,32 +1,31 @@
-<a name="readme-top"></a>
+<a name="title"></a>
 
-<!-- TABLE OF CONTENTS -->
+<!-- TITLE -->
 
-# 📗 Table of Contents
+# 🏷️ School Library 
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+This is the fifth project of the fourth module in the **Microverse** program.
+<br/>
+Check the below contents for further details about this project.
 
-<!-- PROJECT DESCRIPTION -->
+<!-- CONTENTS -->
 
-# 📖 [School Library] <a name="about-project"></a>
+# 📗 Contents
 
-**[School Library]** is the fifth project of the fourth module in the **Microverse** program.
+- [Description](#description)
+- [Instructions](#instructions)
+- [Authors](#authors)
+- [Future](#future)
+- [Contributions](#contributions)
+- [Support](#support)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
+
+<!-- DESCRIPTION -->
+
+<a name="description"></a>
+
+# 📖 Description
 
 The project follows Object Oriented Programming using `Ruby`.
 This repository includes ten class files (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
@@ -36,25 +35,14 @@ Decorator design pattern is implemented for adding several operations on `name` 
 Several associations exist bewteen some classes.
 All data is preserved inside three files (`books.json` / `people.json` / `rentals.json`).
 Unit testing is carried on ten classes (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
-Every method in the above classes had an example test case.
-<br/>
-Check the below contents for further details about this project.
+Every method in the above classes has an example test case inside `specs` directory.
 
-## 🛠 Built With <a name="built-with"></a>
+📌 **Tech Stack:**
+- Code built with `Ruby`
+- Unit tests uses `RSpec`
+- Linting is done with `Rubocop`
 
-### Tech Stack <a name="tech-stack"></a>
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.ruby-lang.org/es/">Ruby</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
+📌 **Key Features:**
 - Class `Nameable` is a parent class for both `Person` & `Decorator`
 - Class `Person` is a parent class for both `Student` & `Teacher`
 - Class `Decorator` is a parent class for both `Capitalize` & `Trimmer`
@@ -102,55 +90,44 @@ Check the below contents for further details about this project.
 - Entry point in `main.rb` file with infinite loop
 - Module `Storage` includes two methods (`read_file` / `write_file`)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
-<!-- GETTING STARTED -->
+<!-- INSTRUCTIONS -->
 
-## 💻 Getting Started <a name="getting-started"></a>
+<a name="instructions"></a>
 
-To get a local copy up and running, follow these steps. You can easily download or fork this repository and work on it immadiately!
+# 🛠️ Instructions
 
-### Prerequisites
+You can easily download or fork this repository and work on it immadiately!
 
+📌 **Prerequisites:**
 - You need `Ruby` language installed
 
-### Setup
-
-Clone this repository to your desired folder:
-
-```sh
-  cd my-folder
-  git https://github.com/mahammad-mostafa/school-library.git
-```
-
-### Install
-
+📌 **Installation:**
 - To install all gem dependencies run
-```sh
+```
 bundle install
 ```
 
-### Usage
-
-To run the project, execute the following command:
-
+📌 **Development:**
 - Run `main.rb` file with
-```sh
+```
 ruby main.rb
 ```
 
-### Testing
-
-To run unit tests with rspec navigate to `specs` directory and run:
-```sh
+📌 **Tests:**
+- To run unit tests navigate to `specs` directory and run:
+```
 rspec . -f d
 ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+<a name="authors"></a>
+
+# 👥 Authors
 
 📌 **Mahammad:**
 - [GitHub](https://github.com/mahammad-mostafa)
@@ -159,52 +136,64 @@ rspec . -f d
 
 📌 **Alexander:**
 - [GitHub](https://github.com/alexansaa)
-- [LinkedIn](https://www.linkedin.com/in/alexander-saavedra-2803b1b6/)
+- [LinkedIn](https://www.linkedin.com/in/alexander-saavedra-2803b1b6)
 
 📌 **Austin:**
 - [GitHub](https://github.com/stino-x)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
-<!-- FUTURE FEATURES -->
+<!-- FUTURE -->
 
-## 🔭 Future Features <a name="future-features"></a>
+<a name="future"></a>
+
+# 🔭 Future
 
 Some additional features I may implement in the project:
 - [ ] Implement better visual interface
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
-<!-- CONTRIBUTING -->
+<!-- CONTRIBUTIONS -->
 
-## 🤝 Contributing <a name="contributing"></a>
+<a name="contributions"></a>
 
-Contributions, issues, and feature requests are welcome!
+# 🤝🏻 Contributions
 
-Feel free to check the [issues page](../../issues/).
+Wish to contribute to this project?
+<br/>
+Contributions, issues, and feature requests are more than welcome!
+<br/>
+Feel free to check the [issues](../../issues) page too.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
 <!-- SUPPORT -->
 
-## ⭐️ Show your support <a name="support"></a>
+<a name="support"></a>
+
+# ⭐️ Support
 
 Like this project? Show your support by starring!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+<a name="acknowledgements"></a>
+
+# 🙏🏻 Acknowledgements
 
 I thank everyone at **Microverse** for guiding me through this project.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#title">back to top</a></p>
 
 <!-- LICENSE -->
 
-## 📝 License <a name="license"></a>
+<a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+# 📝 License
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This project is [MIT](LICENSE.md) licensed.
+
+<p align="right"><a href="#title">back to top</a></p>
