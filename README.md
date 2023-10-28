@@ -35,6 +35,8 @@ Module `Storage` used for handling JSON files read & write.
 Decorator design pattern is implemented for adding several operations on `name` variable in `Person` class.
 Several associations exist bewteen some classes.
 All data is preserved inside three files (`books.json` / `people.json` / `rentals.json`).
+Unit testing is carried on ten classes (`Person` / `Student` / `Teacher` / `Classroom` / `Book` / `Rental` / `Nameable` / `Decorator` / `Capitalize` / `Trimmer`).
+Every method in the above classes had an example test case.
 <br/>
 Check the below contents for further details about this project.
 
@@ -135,6 +137,13 @@ To run the project, execute the following command:
 - Run `main.rb` file with
 ```sh
 ruby main.rb
+```
+
+### Testing
+
+To run unit tests with rspec navigate to `specs` directory and run:
+```sh
+rspec . -f d
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
